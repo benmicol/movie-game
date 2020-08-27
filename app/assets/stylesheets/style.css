@@ -1,11 +1,13 @@
 body {
-	background-color: black;
+	background: rgb(49,3,80);
+	background: linear-gradient(90deg, rgba(49,3,80,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(99,0,82,1) 100%);
 	display: grid;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
 	justify-items: center;
 	font-family: arial;
+	color: white;
 }
 h1, h4 {
 	color: white;
@@ -14,6 +16,7 @@ h3:hover {
 	color: white;
 }
 h3 {
+	color: black;
 	border-color: white;
 	border-style: solid;
 	padding: 10px;
