@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
 		@cast = get_info(@id, 'Actors')
 	end
 	def get_info(id,item)
-		response = HTTP.get("http://www.omdbapi.com/?apikey=efdd29c4&i=#{id}").to_s
+		@api = ENV["API_KEY"]
+		response = HTTP.get("http://www.omdbapi.com/?apikey=#{@api}&i=#{id}").to_s
 		parsed_response = JSON.parse(response)
 		parsed_response[item]
 	end
