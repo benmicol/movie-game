@@ -1,7 +1,23 @@
 <h1>Movie Rating Guessing Game</h1>
-
 <h2><%=@title + " "+"("+@year+")"%></h2>
-<p><%=@cast%></p>
+<h3><%=@cast%></h3>
 <p><%=image_tag(@image)%></p>
-<h4>Score</h4>
-<h3><%=@rating%></h3>
+<h5 id="instruction">Choose the Correct Score</h5>
+<div id="next"><%=link_to "Next", root_path%></div>
+<div class="score">
+<%if @rating == @ratingCheck%>
+<ul class="winner"><%=@rating%></ul>
+<%else%>
+<ul class="loser"><%=@rating%></ul>
+<%end%>
+<%if @rating1 == @ratingCheck%>
+<ul class="winner"><%=@rating1%></ul>
+<%else%>
+<ul class="loser"><%=@rating1%></ul>
+<%end%>
+<%if @rating2 == @ratingCheck%>
+<ul class="winner"><%=@rating2%></ul>
+<%else%>
+<ul class="loser"><%=@rating2%></ul>
+<%end%>
+</div>
