@@ -1,42 +1,87 @@
-body {
+body, html {
+	height: 100vh;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+}
+/*h1,h2,h3,h4,h5 {padding:0; margin:0;}*/
+main {
+	height: 100vh;
+	width: 100vw;
 	background: rgb(49,3,80);
 	background: linear-gradient(90deg, rgba(49,3,80,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(99,0,82,1) 100%);
 	display: grid;
-	place-items: center;
+	place-items: stretch center;
+	place-content: center;
+	text-align: center;
+	font-size: 2vmin;
 	font-family: arial;
 	color: white;
+	/*grid: 1fr 1fr 1fr / 100%;
+	grid-template-areas:
+		"top"
+		"middle"
+		"bottom";
+	place-content: center;
+	*/
+}
+div{
+	width: 100vw;
+	padding: 1vmin;
+	margin: 1vmin auto;
 }
 ul {
-	
-	padding: 10px;
-	margin: 10px;
+	padding: 1vmin;
+	margin: 2vmin;
 	display: inline;
+	font-size: 3vmin;
+}
+.score {
+	width: 50vmin;
+}
+.title {
+	/*grid-area: top;
+	justify-self: center;*/
+}
+.poster {
+	/*grid-area: middle;*/
+	
+}
+.rating {
+	/*grid-area: bottom;*/
 }
 #instruction {
-	font-size: 20px;
-	margin: 10px;
+	/*font-size: 20px;
+	margin: 10px;*/
 }
 #next {
-	margin: 18px;
 	background-color: white;
+	border-radius: 0.5vmin;
+	font-size: 3vmin;
+	width: 35vmin;
+	margin: 5vmin auto;
+	/*margin: 18px;
 	padding: 13px;
-	border-radius: 6px;
-	font-size: 1.25rem;
+	font-size: 1.25rem;*/
 }
 #next a {
 	color: black;
 }
 .score {
-	padding: 10px;
+	/*padding: 10px;
 	margin: 20px;
-	font-size: 40px;
+	font-size: 40px;*/
 }
 .winner, .loser {
 	border-color: white;
 	border-style: solid;
-	
 }
-.winner:hover {
+.image {
+	box-shadow: 0px 0px 83px 0px rgba(82,82,82,1);
+	max-width: 100%;
+	width: 20vmin;
+}
+/*.winner:hover {
 	color: green;
 	border-color: green;
 	border-style: solid;
@@ -46,9 +91,7 @@ ul {
 	border-color: red;
 	border-style: solid;
 }
-img {
-	box-shadow: 0px 0px 83px 0px rgba(82,82,82,1);
-}
+
 .winner a{
 	text-decoration: none;
 	color: white;
@@ -56,4 +99,4 @@ img {
 .winner a:hover {
 	color: green;
 }
-
+*/

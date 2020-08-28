@@ -18,8 +18,6 @@ class ApplicationController < ActionController::Base
 		avail = ratingArr.select {|x| x < (@ratingCheck.to_f - 0.2) || x > (@ratingCheck.to_f + 0.2) }
 		avail2 = avail.select {|x| x > (@ratingCheck.to_f - 1.0) && x < (@ratingCheck.to_f + 1.0)}
 		arrRand = rand(0..avail2.length)
-		lower = @ratingCheck.to_f - 1
-		upper = @ratingCheck.to_f + 1
 		seed1 = avail2[rand(0..avail2.length-1)]
 		avail3 = avail2 - [seed1]
 		seed2 = avail3[rand(0..avail3.length-1)]
