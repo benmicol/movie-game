@@ -1,31 +1,32 @@
 <main>
 	<div class="title">
-		<h1>Movie Rating Guessing Game</h1>
-		<h2><%=@title + " "+"("+@year+")"%></h2>
-		<h3><%=@cast%></h3>
+		
+		<h1><%=@title + " "+"("+@year+")"%></h1>
+		<h4><%=@cast%></h4>
 	</div>
+	<div>
 	<%=image_tag(@image, :class => "image")%>
+	</div>
 	<div class="rating">
-		<h3 id="instruction">Click the Correct Score</h3>
 		<div class="score">
-			<%if @rating == @ratingCheck%>
-				<ul class="winner" onclick="this.style.backgroundColor='#009900'"><%=@rating%></ul>
-			<%else%>
-				<ul class="loser" onclick="this.style.backgroundColor='#990000'"><%=@rating%></ul>
-			<%end%>
-			<%if @rating1 == @ratingCheck%>
-				<ul class="winner" onclick="this.style.backgroundColor='#009900'"><%=@rating1%></ul>
-			<%else%>
-				<ul class="loser" onclick="this.style.backgroundColor='#990000'"><%=@rating1%></ul>
-			<%end%>
-			<%if @rating2 == @ratingCheck%>
-				<ul class="winner" onclick="this.style.backgroundColor='#009900'"><%=@rating2%></ul>
-			<%else%>
-				<ul class="loser" onclick="this.style.backgroundColor='#990000'"><%=@rating2%></ul>
-			<%end%>
-		</div>
-		<div id="next">
-				<%=link_to "Next", root_path%>
+			
+			
+				<%if @rating == @ratingCheck%>
+					<%=button_to @rating, play_path, id: "ratingbtn", class: "ratingbtn", onclick: "this.style.background='#009900'" %>
+				<%else%>
+					<%=button_tag @rating, id: "ratingbtn", class: "ratingbtn", onclick: "this.style.background='#990000'" %>
+				<%end%>
+				<%if @rating1 == @ratingCheck%>
+					<%=button_to @rating1, play_path, id: "ratingbtn1", class: "ratingbtn", onclick: "this.style.background='#009900'" %>
+				<%else%>
+					<%=button_tag @rating1, {id: "ratingbtn1", class: "ratingbtn", onclick: "this.style.background='#990000'"} %>
+				<%end%>
+				<%if @rating2 == @ratingCheck%>
+					<%=button_to @rating2, play_path, id: "ratingbtn2", class: "ratingbtn", onclick: "this.style.background='#009900'" %>
+				<%else%>
+					<%=button_tag @rating2, {id: "ratingbtn2", class: "ratingbtn", onclick: "this.style.background='#990000'"} %>
+				<%end%>
+			
 		</div>
 	</div>
-</main>
+</main> 

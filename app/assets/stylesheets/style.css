@@ -4,99 +4,51 @@ body, html {
 	padding: 0;
 	margin: 0;
 }
-/*h1,h2,h3,h4,h5 {padding:0; margin:0;}*/
 main {
-	height: 100vh;
 	width: 100vw;
-	background: rgb(49,3,80);
-	background: linear-gradient(90deg, rgba(49,3,80,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(99,0,82,1) 100%);
-	display: grid;
-	place-items: stretch center;
-	place-content: center;
+	height: 100vh;
+	display: inline-flex;
+	flex-direction: column;
 	text-align: center;
-	font-size: 2vmin;
+	background: linear-gradient(90deg, rgba(49,3,80,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(99,0,82,1) 100%);
+	font-size: 2.5vh;
 	font-family: arial;
 	color: white;
-	/*grid: 1fr 1fr 1fr / 100%;
-	grid-template-areas:
-		"top"
-		"middle"
-		"bottom";
-	place-content: center;
-	*/
 }
-div{
-	width: 100vw;
+div {
+	margin: auto;
+}
+.ratingbtn {
+	box-shadow:rgb(98, 41, 255) 0 -1vmin 2vmin 0 inset;
+	background:rgba(0, 0, 0, 0) linear-gradient(rgb(61, 45, 249) 5%, rgb(6, 10, 250) 100%) repeat scroll 0% 0%;
+	background-color:#2dabf9;
+	border-radius:1vmin;
+	border:0.3vmin solid #0b0e07;
+	cursor:pointer;
+	color:#ffffff;
+	font-size: 4vh;
+	padding: 0.8vh 1.5vh;
+	text-decoration:none;
+	text-shadow:0 0.3vmin 0 #263666;
+	margin: 1vh;
+}
+.ratingbtn:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.ratingbtn:active {
+	position:relative;
+	top: 1vmin;
+}
+.resultParas p {
 	padding: 1vmin;
-	margin: 1vmin auto;
-}
-ul {
-	padding: 1vmin;
-	margin: 2vmin;
-	display: inline;
-	font-size: 3vmin;
-}
-.score {
-	width: 50vmin;
-}
-.title {
-	/*grid-area: top;
-	justify-self: center;*/
-}
-.poster {
-	/*grid-area: middle;*/
-	
-}
-.rating {
-	/*grid-area: bottom;*/
-}
-#instruction {
-	/*font-size: 20px;
-	margin: 10px;*/
-}
-#next {
-	background-color: white;
-	border-radius: 0.5vmin;
-	font-size: 3vmin;
-	width: 35vmin;
-	margin: 5vmin auto;
-	/*margin: 18px;
-	padding: 13px;
-	font-size: 1.25rem;*/
-}
-#next a {
-	color: black;
-}
-.score {
-	/*padding: 10px;
-	margin: 20px;
-	font-size: 40px;*/
-}
-.winner, .loser {
-	border-color: white;
-	border-style: solid;
+	margin: 2vmin auto;
+	font-size: 2vh;
 }
 .image {
 	box-shadow: 0px 0px 83px 0px rgba(82,82,82,1);
-	max-width: 100%;
-	width: 20vmin;
+	width: 35vh;
 }
-/*.winner:hover {
-	color: green;
-	border-color: green;
-	border-style: solid;
+.score {
+	display: inline-flex;
 }
-.loser:hover {
-	color: red;
-	border-color: red;
-	border-style: solid;
-}
-
-.winner a{
-	text-decoration: none;
-	color: white;
-}
-.winner a:hover {
-	color: green;
-}
-*/
